@@ -1,9 +1,12 @@
-import { NextResponse } from "next/server";
+import { NextResponse, after } from "next/server";
 import { z } from "zod";
 import { parseCsv, processRows, DATASET_TYPES, type DatasetType } from "@aloufa/importer";
 import { requireOperator, readCsv, fail } from "@/lib/api";
 import { supabaseAdmin } from "@/lib/supabase/admin";
 import { serverEnv } from "@/lib/env";
+import { runTick } from "@/lib/agents";
+
+export const maxDuration = 800;
 
 const Body = z.object({
   type: z.enum(DATASET_TYPES as [DatasetType, ...DatasetType[]]),
@@ -51,6 +54,9 @@ export async function POST(request: Request) {
     return fail("server", 500, loadErr.message);
   }
   const { data: event } = await admin.from("events").select("routed_to, payload").eq("id", eventId).single();
+
+  // Les dirigeants concernés démarrent tout de suite, après l'envoi de la réponse
+  after(async () => { await runTick(450_000).catch((e) => console.error("tick après import", e)); });
 
   return NextResponse.json({
     datasetId: ds.id,
