@@ -8,6 +8,9 @@ import { publicEnv } from "@/lib/env";
 import { getViewer } from "@/lib/auth";
 import "../globals.css";
 
+// Chaque page dépend de la session : rendu à la demande, jamais figé au build
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
