@@ -1,0 +1,8 @@
+Order Number,Order Date,Order Status,Order Total,Order Currency,Billing Email,Item Name,Coupon Code,UTM Source
+1001,2026-10-02 12:15:00,wc-completed,"$110.00",USD,Ana@Example.com,Aloufa Standard Plan - 4 meals,,
+1002,2026-10-03 18:40:00,completed,80.00,USD,ben@example.com,Light Plan,,
+1003,2026-10-09 09:05:00,processing,"1,150.00",USD,ana@example.com,Premium Plan,IG10,instagram
+1004,2026-10-10 23:30:00,cancelled,150.00,USD,chloe@example.com,Premium Plan,,
+1005,2026-10-11 10:00:00,completed,abc,USD,dan@example.com,Light Plan,,
+1006,2026-10-11 10:00:00,completed,80.00,USD,,Light Plan,,
+1001,2026-10-02 12:15:00,completed,110.00,USD,ana@example.com,Standard,,
