@@ -1,0 +1,65 @@
+{
+  "app": { "name": "Aloufa Executive OS" },
+  "nav": { "home": "Home", "dataRoom": "Data room", "login": "Sign in", "language": "Français", "signedInAs": "Signed in: {name}" },
+  "setup": {
+    "title": "Supabase is not configured yet",
+    "body": "Set NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, SUPABASE_SECRET_KEY and IMPORT_HASH_SALT in the Vercel settings, then redeploy."
+  },
+  "home": {
+    "title": "Home",
+    "placeholder": "The CEO brief and pending decisions will show here. Final screens come after the design is approved.",
+    "executives": "Executives",
+    "status": { "dormant": "Dormant", "active": "Active", "suspended": "Suspended" },
+    "waitsFor": "Waiting for: {datasets}",
+    "noData": "No executives found. Check that the migrations were applied."
+  },
+  "login": {
+    "title": "Sign in",
+    "email": "Email address",
+    "submit": "Email me a sign-in link",
+    "sent": "Link sent. Open the email on this device to sign in.",
+    "error": "Could not send: {message}"
+  },
+  "dataRoom": {
+    "title": "Data room",
+    "intro": "Drop a CSV export. The type is detected, you check the column mapping, then you load it.",
+    "forbidden": "Only the operator account can import data.",
+    "signIn": "Sign in to import data.",
+    "file": "CSV file",
+    "analyze": "Analyze",
+    "analyzing": "Analyzing…",
+    "detected": "Detected type: {type} ({confidence}% confidence)",
+    "typeLabel": "Data type",
+    "mappingTitle": "Column mapping",
+    "field": "Field",
+    "column": "File column",
+    "notMapped": "Not used",
+    "required": "required",
+    "missing": "Required fields without a column: {fields}",
+    "sample": "First 5 rows",
+    "load": "Load {count} rows",
+    "loading": "Loading…",
+    "loaded": "{rows} rows loaded, from {start} to {end}. KPIs recomputed, executives notified: {routed}.",
+    "nobody": "none",
+    "rejectedTitle": "{count} rows rejected",
+    "line": "Row {line}",
+    "history": "Recent imports",
+    "empty": "No imports yet.",
+    "types": {
+      "instagram_account": "Instagram, account",
+      "instagram_media": "Instagram, posts",
+      "meta_ads": "Meta Ads",
+      "woocommerce_orders": "WooCommerce orders"
+    },
+    "datasetStatus": { "uploaded": "Uploaded", "mapped": "Mapped", "validated": "Validated", "loaded": "Loaded", "rejected": "Rejected" }
+  },
+  "errors": {
+    "unauthorized": "Sign-in required.",
+    "forbidden": "Operator only.",
+    "noFile": "No file received.",
+    "tooLarge": "File too large (10 MB max).",
+    "empty": "The file has no data rows.",
+    "allRejected": "Every row was rejected: nothing was loaded.",
+    "server": "Server error: {message}"
+  }
+}

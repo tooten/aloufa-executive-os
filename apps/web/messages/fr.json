@@ -1,0 +1,65 @@
+{
+  "app": { "name": "Aloufa Executive OS" },
+  "nav": { "home": "Accueil", "dataRoom": "Data room", "login": "Connexion", "language": "English", "signedInAs": "Connecté : {name}" },
+  "setup": {
+    "title": "Supabase n'est pas encore configuré",
+    "body": "Renseigne NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY, SUPABASE_SECRET_KEY et IMPORT_HASH_SALT dans les réglages Vercel, puis redéploie."
+  },
+  "home": {
+    "title": "Accueil",
+    "placeholder": "Le brief du CEO et les décisions en attente s'afficheront ici. Les écrans définitifs arrivent après validation du design.",
+    "executives": "Dirigeants",
+    "status": { "dormant": "Dormant", "active": "Actif", "suspended": "Suspendu" },
+    "waitsFor": "Attend : {datasets}",
+    "noData": "Aucun dirigeant chargé. Vérifie que les migrations ont été appliquées."
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "Adresse e-mail",
+    "submit": "Recevoir le lien de connexion",
+    "sent": "Lien envoyé. Ouvre l'e-mail sur cet appareil pour te connecter.",
+    "error": "Envoi impossible : {message}"
+  },
+  "dataRoom": {
+    "title": "Data room",
+    "intro": "Dépose un export CSV. Le type est détecté, tu vérifies le mapping des colonnes, puis tu charges.",
+    "forbidden": "Seul le compte opérateur peut importer des données.",
+    "signIn": "Connecte-toi pour importer des données.",
+    "file": "Fichier CSV",
+    "analyze": "Analyser",
+    "analyzing": "Analyse…",
+    "detected": "Type détecté : {type} (confiance {confidence} %)",
+    "typeLabel": "Type de données",
+    "mappingTitle": "Correspondance des colonnes",
+    "field": "Champ",
+    "column": "Colonne du fichier",
+    "notMapped": "Non utilisée",
+    "required": "obligatoire",
+    "missing": "Champs obligatoires sans colonne : {fields}",
+    "sample": "Aperçu des 5 premières lignes",
+    "load": "Charger {count} lignes",
+    "loading": "Chargement…",
+    "loaded": "{rows} lignes chargées, période du {start} au {end}. KPIs recalculés, dirigeants prévenus : {routed}.",
+    "nobody": "aucun",
+    "rejectedTitle": "{count} lignes rejetées",
+    "line": "Ligne {line}",
+    "history": "Derniers imports",
+    "empty": "Aucun import pour l'instant.",
+    "types": {
+      "instagram_account": "Instagram, compte",
+      "instagram_media": "Instagram, publications",
+      "meta_ads": "Meta Ads",
+      "woocommerce_orders": "Commandes WooCommerce"
+    },
+    "datasetStatus": { "uploaded": "Déposé", "mapped": "Mappé", "validated": "Validé", "loaded": "Chargé", "rejected": "Rejeté" }
+  },
+  "errors": {
+    "unauthorized": "Connexion requise.",
+    "forbidden": "Action réservée à l'opérateur.",
+    "noFile": "Aucun fichier reçu.",
+    "tooLarge": "Fichier trop lourd (10 Mo maximum).",
+    "empty": "Le fichier ne contient aucune ligne de données.",
+    "allRejected": "Toutes les lignes ont été rejetées : rien n'a été chargé.",
+    "server": "Erreur serveur : {message}"
+  }
+}
